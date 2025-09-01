@@ -1,0 +1,1414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Premium Pleated Skirt - SchoolStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Main Styles */
+        :root {
+            --primary: #3a5a99;
+            --secondary: #e9ecef;
+            --dark: #343a40;
+            --light: #f8f9fa;
+            --accent: #ff6b6b;
+            --text: #212529;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: #294272;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #294272;
+            border-color: #294272;
+        }
+
+        /* Navigation */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+
+        .cart-link {
+            position: relative;
+        }
+
+        .cart-counter {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--gray);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Product Detail Page */
+        .product-detail-section {
+            padding: 60px 0;
+        }
+
+        .product-main-image-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .product-main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .product-badges .badge {
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 5px 10px;
+        }
+
+        .product-thumbs {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .product-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-thumb.active {
+            border-color: var(--primary);
+        }
+
+        .image-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            color: var(--primary);
+        }
+
+        .feature-item i {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-item span {
+            font-size: 0.8rem;
+        }
+
+        /* Product Info */
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-code {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .rating-count {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .school-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .price-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .current-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .original-price {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: var(--gray);
+        }
+
+        .discount-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .product-description ul {
+            padding-left: 20px;
+        }
+
+        .product-description li {
+            margin-bottom: 5px;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Color Selection */
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .color-option.active {
+            border-color: var(--primary);
+        }
+
+        .color-option.active::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+        }
+
+        .selected-color {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Size Selection */
+        .size-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .size-option {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gray);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .size-option.active, .size-option:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .size-guide-link {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Quantity Selector */
+        .quantity-input {
+            display: flex;
+            width: 120px;
+            border: 1px solid var(--secondary);
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .quantity-input input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            background: none;
+            font-weight: 500;
+        }
+
+        .quantity-input input:focus {
+            outline: none;
+        }
+
+        /* Stock Info */
+        .stock-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-add-to-cart {
+            flex-grow: 1;
+        }
+
+        .btn-wishlist {
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Product Benefits */
+        .product-benefits {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--secondary);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            width: 25px;
+        }
+
+        .benefit-item h6 {
+            margin-bottom: 0;
+        }
+
+        .benefit-item p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Product Tabs */
+        .product-tabs-section {
+            background-color: var(--light);
+        }
+
+        .product-tabs {
+            border-bottom: none;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .product-tabs .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 0 5px;
+        }
+
+        .product-tabs .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .product-tab-content {
+            border-radius: var(--border-radius);
+        }
+
+        /* Features Tab */
+        .feature-item-detailed {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .feature-content h5 {
+            margin-bottom: 5px;
+        }
+
+        .feature-content p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+
+        .feature-callout {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 20px;
+        }
+
+        .feature-callout h5 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+        }
+
+        .feature-callout ul {
+            margin-bottom: 0;
+        }
+
+        /* Care Tab */
+        .care-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .care-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .care-content h5 {
+            margin-bottom: 5px;
+        }
+
+        .care-content p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+
+        .care-tips {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 20px;
+        }
+
+        .care-video {
+            margin-top: 20px;
+        }
+
+        /* Reviews Tab */
+        .overall-rating {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .overall-rating h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .rating-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .rating-item span {
+            width: 60px;
+        }
+
+        .rating-item .progress {
+            flex-grow: 1;
+            margin: 0 10px;
+            height: 8px;
+        }
+
+        .filter-pills {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-label {
+            color: var(--gray);
+        }
+
+        .filter-pill {
+            background: none;
+            border: 1px solid var(--secondary);
+            border-radius: 25px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-pill.active, .filter-pill:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .review-item {
+            border-bottom: 1px solid var(--secondary);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-info h5 {
+            margin-bottom: 5px;
+        }
+
+        .review-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .verified-purchase {
+            color: #28a745;
+        }
+
+        .review-content h6 {
+            margin: 15px 0 10px;
+            font-weight: 600;
+        }
+
+        .review-photos {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .review-photo {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .review-footer {
+            margin-top: 15px;
+        }
+
+        .review-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-helpful, .btn-report {
+            background: none;
+            border: none;
+            font-size: 0.9rem;
+            color: var(--gray);
+            padding: 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-helpful:hover {
+            color: var(--primary);
+        }
+
+        .btn-report:hover {
+            color: var(--accent);
+        }
+
+        /* Shipping Tab */
+        .shipping-method {
+            margin-bottom: 20px;
+        }
+
+        .shipping-method h5 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .shipping-method p {
+            margin-bottom: 5px;
+        }
+
+        .important-note {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 15px;
+        }
+
+        .important-note p {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .returns-process {
+            margin-top: 20px;
+        }
+
+        .returns-process h5 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Complete the Look Section */
+        .complete-look-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card .product-image {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .product-card .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-card .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .product-card .product-actions {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-actions {
+            bottom: 0;
+        }
+
+        .product-card .action-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--dark);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .action-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .product-card .product-info {
+            padding: 15px;
+        }
+
+        .product-card .product-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-card .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-card .current-price {
+            font-size: 1.1rem;
+        }
+
+        .product-card .original-price {
+            font-size: 0.9rem;
+        }
+
+        .product-card .product-colors {
+            display: flex;
+            gap: 5px;
+        }
+
+        .product-card .color-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .product-card .color-dot.white {
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .product-card .color-dot.navy {
+            background-color: #1a2d54;
+        }
+
+        .product-card .color-dot.blue {
+            background-color: #3a5a99;
+        }
+
+        .product-card .color-dot.gray {
+            background-color: #626262;
+        }
+
+        .product-card .color-dot.black {
+            background-color: #000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        footer h5 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        footer a {
+            color: #dee2e6;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer p {
+            color: #adb5bd;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-newsletter input {
+            border-radius: 25px 0 0 25px;
+        }
+
+        .footer-newsletter button {
+            border-radius: 0 25px 25px 0;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .payment-icon {
+            font-size: 1.5rem;
+            color: #adb5bd;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #294272;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Media Queries */
+        @media (max-width: 991px) {
+            .product-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .product-detail-section {
+                padding: 40px 0;
+            }
+            
+            .product-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .product-tabs .nav-link {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .overall-rating h2 {
+                font-size: 2.5rem;
+            }
+            
+            .filter-pills {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .product-detail-section {
+                padding: 30px 0;
+            }
+            
+            .product-title {
+                font-size: 1.5rem;
+            }
+            
+            .product-thumb {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .current-price {
+                font-size: 1.5rem;
+            }
+            
+            .original-price {
+                font-size: 1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-add-to-cart {
+                width: 100%;
+            }
+            
+            .btn-buy-now {
+                width: 100%;
+            }
+            
+            .btn-wishlist {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            .product-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+            
+            .product-tabs .nav-link {
+                white-space: nowrap;
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .product-tab-content {
+                padding: 15px !important;
+            }
+            
+            .review-photo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .overall-rating h2 {
+                font-size: 2rem;
+            }
+            
+            .rating-item span {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="SchoolStyle Logo" height="40">
+                SchoolStyle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#schools">Schools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="collection.html">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="#cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-counter">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container py-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#collections">Collections</a></li>
+                <li class="breadcrumb-item"><a href="#">Girls</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Premium Pleated Skirt</li>
+            </ol>
+        </nav>
+    </div>
+    
+    <!-- Product Details -->
+    <section class="product-detail-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="product-gallery">
+                        <div class="product-main-image-container">
+                            <img src="images/deial.jpg" alt="Girls Premium Pleated Skirt" class="img-fluid rounded product-main-image">
+                            <div class="product-badges">
+                                <span class="badge bg-success">Bestseller</span>
+                                <span class="badge bg-danger">15% OFF</span>
+                            </div>
+                        </div>
+                        <div class="product-thumbs mt-3">
+                            <div class="product-thumb active" data-image="images/girl-skirt.jpg">
+                                <img src="images/front.jpg" alt="Skirt Front">
+                            </div>
+                            <div class="product-thumb" data-image="images/girl-skirt-side.jpg">
+                                <img src="images/ide.jpg" alt="Skirt Side View">
+                            </div>
+                            <div class="product-thumb" data-image="images/girl-skirt-back.jpg">
+                                <img src="images/back.jpg" alt="Skirt Back">
+                            </div>
+                            <div class="product-thumb" data-image="images/girl-skirt-detail.jpg">
+                                <img src="images/deial.jpg" alt="Skirt Detail">
+                            </div>
+                        </div>
+                        <div class="image-features mt-4">
+                            <div class="feature-item">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Zoom</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Wishlist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="product-info-detailed">
+                        <div class="product-meta">
+                            <span class="product-code">Product Code: GSK-2023</span>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(42 Reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <h1 class="product-title mb-2">Girls Premium Pleated Skirt</h1>
+                        <div class="school-tag mb-3">St. Mary's High</div>
+                        
+                        <div class="price-info mb-4">
+                            <span class="current-price">$34.99</span>
+                            <span class="original-price">$39.99</span>
+                            <span class="discount-tag">15% OFF</span>
+                        </div>
+                        
+                        <div class="product-description mb-4">
+                            <p>Our premium pleated skirt is designed for comfort and style, making it perfect for everyday school wear. The permanent pleats hold their shape wash after wash, while the adjustable waist ensures a perfect fit as your child grows.</p>
+                            <ul>
+                                <li>65% polyester, 35% viscose</li>
+                                <li>Permanent pleats that hold their shape</li>
+                                <li>Adjustable waist with hidden elasticated back</li>
+                                <li>Crease resistant and easy-care fabric</li>
+                                <li>Available in navy blue, gray, and black</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="color-selection mb-4">
+                            <h5 class="option-title">Color</h5>
+                            <div class="color-options">
+                                <div class="color-option active" data-color="navy" style="background-color: #1a2d54;"></div>
+                                <div class="color-option" data-color="gray" style="background-color: #626262;"></div>
+                                <div class="color-option" data-color="black" style="background-color: #000000;"></div>
+                            </div>
+                            <div class="selected-color">Navy Blue</div>
+                        </div>
+                        
+                        <div class="size-selection mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="option-title mb-0">Size</h5>
+                                <a href="#sizing" class="size-guide-link"><i class="fas fa-ruler"></i> Size Guide</a>
+                            </div>
+                            <div class="size-options">
+                                <div class="size-option" data-size="4">4</div>
+                                <div class="size-option" data-size="6">6</div>
+                                <div class="size-option active" data-size="8">8</div>
+                                <div class="size-option" data-size="10">10</div>
+                                <div class="size-option" data-size="12">12</div>
+                                <div class="size-option" data-size="14">14</div>
+                                <div class="size-option" data-size="16">16</div>
+                            </div>
+                        </div>
+                        
+                        <form class="product-form">
+                            <input type="hidden" id="selectedColor" name="color" value="navy">
+                            <input type="hidden" id="selectedSize" name="size" value="8">
+                            
+                            <div class="quantity-selector mb-4">
+                                <h5 class="option-title mb-2">Quantity</h5>
+                                <div class="quantity-input">
+                                    <button type="button" class="quantity-btn minus" id="decreaseQuantity">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" readonly>
+                                    <button type="button" class="quantity-btn plus" id="increaseQuantity">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="stock-info mb-3">
+                                <i class="fas fa-check-circle"></i> In Stock: Available for immediate dispatch
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button type="button" class="btn btn-primary btn-add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                                <button type="button" class="btn btn-outline-primary btn-buy-now">
+                                    Buy Now
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="product-benefits mt-4">
+                            <div class="benefit-item">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <h6>Free Delivery</h6>
+                                    <p>On orders over $100</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-undo"></i>
+                                <div>
+                                    <h6>Easy Returns</h6>
+                                    <p>30-day return policy</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-shield-alt"></i>
+                                                            <div class="benefit-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h6>Secure Payment</h6>
+                                    <p>100% secure checkout</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-4 mb-4">
+                    <h5>About SchoolStyle</h5>
+                    <p>Your trusted source for premium school uniforms designed for comfort, durability, and style.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#schools">Schools</a></li>
+                        <li><a href="index.html#collections">Collections</a></li>
+                        <li><a href="index.html#sizing">Sizing Guide</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div class="col-md-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <form class="footer-newsletter d-flex">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Contact -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <p>Email: support@schoolstyle.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>123 School St, Springfield</p>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <p>&copy; 2025 SchoolStyle. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa payment-icon"></i>
+                    <i class="fab fa-cc-mastercard payment-icon"></i>
+                    <i class="fab fa-cc-paypal payment-icon"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Thumbnail switching
+        document.querySelectorAll('.product-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                document.querySelector('.product-thumb.active').classList.remove('active');
+                thumb.classList.add('active');
+                document.querySelector('.product-main-image').src = thumb.dataset.image;
+            });
+        });
+
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelector('.color-option.active').classList.remove('active');
+                option.classList.add('active');
+                document.getElementById('selectedColor').value = option.dataset.color;
+                document.querySelector('.selected-color').textContent =
+                    option.dataset.color.charAt(0).toUpperCase() + option.dataset.color.slice(1);
+            });
+        });
+
+        // Size selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelector('.size-option.active')?.classList.remove('active');
+                option.classList.add('active');
+                document.getElementById('selectedSize').value = option.dataset.size;
+            });
+        });
+
+        // Quantity control
+        const quantityInput = document.getElementById('quantity');
+        document.getElementById('increaseQuantity').addEventListener('click', () => {
+            if (quantityInput.value < 10) quantityInput.value++;
+        });
+        document.getElementById('decreaseQuantity').addEventListener('click', () => {
+            if (quantityInput.value > 1) quantityInput.value--;
+        });
+
+        // Add to Cart
+        const cartCounter = document.querySelector('.cart-counter');
+        document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
+            let current = parseInt(cartCounter.textContent);
+            cartCounter.textContent = current + parseInt(quantityInput.value);
+            alert('Item added to cart!');
+        });
+
+        // Back to top
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('active', window.scrollY > 300);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
